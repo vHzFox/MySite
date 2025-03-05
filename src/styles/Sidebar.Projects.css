@@ -1,0 +1,22 @@
+.project-list {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .project-list li {
+    margin: 5px 0;
+  }
+  
+  .project-list li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .project-list li a.active,
+  .project-list li a:hover {
+    color: #ffffff;
+    font-weight: bold;
+  }

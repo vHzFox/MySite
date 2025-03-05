@@ -1,0 +1,87 @@
+/* Grundläggande layout för sidan */
+.container {
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling för Sidomenyn */
+.sidebar {
+  width: 250px;
+  background-color: #333; /* Mörk bakgrundsfärg */
+  padding: 20px;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+
+/* Huvudinnehåll */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+  transition: margin-left 0.3s ease;
+  background-color: #222; /* Mörk bakgrund för huvudinnehåll */
+  color: #eee; /* Ljusa textfärger för kontrast */
+}
+
+/* Styling för huvudrubriker och text */
+h1, h2, h3, h4 {
+  color: #fff;
+}
+
+p {
+  color: #ccc;
+}
+
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
